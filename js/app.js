@@ -47,3 +47,10 @@ const divideKey = document.querySelector(".divid");
 divideKey.addEventListener("click", () => {
   operation = divide;
 });
+
+const equal = document.querySelector('.equal');
+equal.addEventListener('click', () => {
+  operate(operation, firstNumber, secondNumber);
+  firstNumber = operate(operation, firstNumber, secondNumber);
+  secondNumber = '';
+});
