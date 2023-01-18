@@ -1,5 +1,5 @@
 // Add basic math operations
-function add(x, y) {
+function sum(x, y) {
   return +x + +y;
 }
 function subtract(x, y) {
