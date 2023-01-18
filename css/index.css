@@ -8,3 +8,10 @@
   flex-direction: column;
   border: 1px solid;
 }
+
+.display{
+  text-align: center;
+  padding: 40px 5px;
+  border: 1px solid;
+  font-size: 40px;
+}
