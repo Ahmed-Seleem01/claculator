@@ -15,3 +15,12 @@ function divide(x, y) {
 function operate(operation, x, y){
   return operation(x, y);
 }
+
+const firstNumber = '';
+
+const numbers = document.querySelectorAll('.num');
+for (const num of numbers){
+  num.addEventListener('click', (e)=>{
+    firstNumber+=e.target.textContent;
+  })
+}
