@@ -17,11 +17,16 @@ function operate(operation, x, y) {
 }
 
 let firstNumber = "";
+let secondNumber = "";
 
 const numbers = document.querySelectorAll(".num");
 for (const num of numbers) {
   num.addEventListener("click", (e) => {
-    firstNumber += e.target.textContent;
+    if (firstNumber === "") {
+      firstNumber += e.target.textContent;
+    } else {
+      secondNumber += e.target.textContent;
+    }
   });
 }
 
@@ -42,4 +47,3 @@ const divideKey = document.querySelector(".divid");
 divideKey.addEventListener("click", () => {
   operation = divide;
 });
-
