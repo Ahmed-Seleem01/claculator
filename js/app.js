@@ -16,7 +16,7 @@ function operate(operation, x, y){
   return operation(x, y);
 }
 
-const firstNumber = '';
+let firstNumber = '';
 
 const numbers = document.querySelectorAll('.num');
 for (const num of numbers){
@@ -24,3 +24,4 @@ for (const num of numbers){
     firstNumber+=e.target.textContent;
   })
 }
+
