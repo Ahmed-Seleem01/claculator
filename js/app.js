@@ -20,13 +20,18 @@ let firstNumber = "";
 let secondNumber = "";
 
 const numbers = document.querySelectorAll(".num");
+console.log(numbers)
 for (const num of numbers) {
   num.addEventListener("click", (e) => {
-    if (firstNumber === "") {
+    if (operation === "") {
       firstNumber += e.target.textContent;
+      console.log("first"+firstNumber)
     } else {
       secondNumber += e.target.textContent;
+      console.log("second"+secondNumber)
     }
+    
+    
   });
 }
 
@@ -34,30 +39,37 @@ let operation = "";
 const sumKey = document.querySelector(".sum");
 sumKey.addEventListener("click", () => {
   operation = sum;
+  console.log(operation)
 });
 const subtractKey = document.querySelector(".sub");
 subtractKey.addEventListener("click", () => {
   operation = subtract;
+  console.log(operation)
 });
 const multiplyKey = document.querySelector(".mul");
 multiplyKey.addEventListener("click", () => {
   operation = multiply;
+  console.log(operation)
 });
 const divideKey = document.querySelector(".divid");
 divideKey.addEventListener("click", () => {
   operation = divide;
+  console.log(operation)
 });
 
-const equal = document.querySelector('.equal');
-equal.addEventListener('click', () => {
-  operate(operation, firstNumber, secondNumber);
+const equal = document.querySelector(".equal");
+equal.addEventListener("click", () => {
+  console.log(operate(operation, firstNumber, secondNumber));
   firstNumber = operate(operation, firstNumber, secondNumber);
-  secondNumber = '';
+  secondNumber = "";
+  operation = "";
 });
 
-const clear = document.querySelector('.clear');
-clear.addEventListener('click', () => {
-  firstNumber ='';
-  secondNumber = ''; 
-  operation = '';
+const clear = document.querySelector(".clear");
+clear.addEventListener("click", () => {
+  firstNumber = "";
+  secondNumber = "";
+  operation = "";
 });
+
+
