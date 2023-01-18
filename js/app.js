@@ -54,3 +54,10 @@ equal.addEventListener('click', () => {
   firstNumber = operate(operation, firstNumber, secondNumber);
   secondNumber = '';
 });
+
+const clear = document.querySelector('.clear');
+clear.addEventListener('click', () => {
+  firstNumber ='';
+  secondNumber = ''; 
+  operation = '';
+});
