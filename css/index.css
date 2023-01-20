@@ -24,7 +24,7 @@
   display: grid;
   grid-template: repeat(5, 1fr) / repeat(4, 1fr);
   gap: 2px;
-  flex: 3;
+  flex: 1;
 }
 .keys div {
   padding: 10px;
@@ -35,7 +35,10 @@
   cursor: pointer;
 }
 .keys div:hover {
-  background-color: gray;
+  border: 1px solid rgb(232, 255, 58);
+}
+.keys div:active {
+  background-color: rgb(50, 241, 50);
 }
 .num.zero {
   grid-area: 5/1/6/3;
@@ -58,7 +61,10 @@
 }
 div.equal {
   grid-area: 4/4/6/5;
-  background-color: rgb(56, 116, 184);;
+  background-color: rgb(56, 116, 184);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 div.clear{
