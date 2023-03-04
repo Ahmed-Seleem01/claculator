@@ -19,24 +19,25 @@ function operate(operation, x, y) {
 let firstNumber = "";
 let secondNumber = "";
 
-const display = document.querySelector('.display')
+const display = document.querySelector(".display");
 
 const numbers = document.querySelectorAll(".num");
 console.log(numbers);
-for (const num of numbers) {
+let operation = "";
+numbers.forEach( num => {
   num.addEventListener("click", (e) => {
     if (operation === "") {
       firstNumber += e.target.textContent;
-      display.textContent = firstNumber
+      display.textContent = firstNumber;
     } else {
       secondNumber += e.target.textContent;
       display.textContent = "";
-      display.textContent =  secondNumber;
+      display.textContent = secondNumber;
     }
   });
-}
+})
 
-let operation = "";
+
 const sumKey = document.querySelector(".sum");
 sumKey.addEventListener("click", () => {
   operation = sum;
